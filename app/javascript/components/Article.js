@@ -16,29 +16,29 @@ class Article extends React.Component {
           <small>
             Created by: {this.props.author}, {this.props.created_at} ago,
             last updated: {this.props.updated_at} ago
-            //&nbsp;
-            // <Timestamp time={this.props.created_at} precision={3} />,
-            // last updated: <Timestamp time={this.props.updated_at} precision={3} />
-            </small>  
+            &nbsp;
+            <Timestamp time={this.props.created_at} precision={4} />,
+             last updated: <Timestamp time={this.props.updated_at} precision={4} />
+            </small>
           </div>
         </div>
       </React.Fragment>
     );
   }
-}
 
-  // componentDidMount() {
-  //   var self = this;
-  //   setInterval(function() { self.forceUpdate() }, 5000);
-  // }
-   
-  //  componentWillUnmount() {
-  //   if (this._timer) { 
-  //     clearInterval(this._timer);
-  //     this._timer = null;
-  //   }
-  // }
-//}
+   componentDidMount() {
+     var self = this;
+     setInterval(function() { self.forceUpdate() }, 5000);
+   }
+
+  componentWillUnmount() {
+      if (this._timer) {
+        clearInterval(this._timer);
+        this._timer = null;
+      }
+    }
+  }
+ 
 
 Article.propTypes = {
   title: PropTypes.string,

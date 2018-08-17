@@ -7,10 +7,10 @@ class Colorpicker extends React.Component {
 	render() {
 		return (<React.Fragment>
 					     <SketchPicker/>
-				       </React.Fragment>)
+				    </React.Fragment>);
 	}
-}  
+}
 
-Colorpicker.Proptypes = {};
+Colorpicker.proptypes = {};
 
-exportdefault Colorpicker
+export default Colorpicker
